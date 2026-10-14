@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reliable Work Services</title>
+
+    <style>
+        /* GENERAL STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f7f2;
+            color: #142d27;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            width: 100%;
+            padding: 22px 8%;
+            background-color: #C15A16;
+        }
+
+        .business-name {
+            color: #f5f0e5;
+            text-decoration: none;
+            font-family: "Aukim II Bold Italic",
+                         "Aukim II", Arial, sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 23px;
+            letter-spacing: 2.5px;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1.2;
+        }
+
+
+/* BOTTOM LINE */
+.business-sub {
+    color: #f5f0e5;
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    font-style: normal;
+    text-transform: uppercase;
+
+    transform: scaleY(0.9);
+    transform-origin: top center;
+}
+
+/* HERO SECTION */
+.hero {
+    height: calc(100vh - 75px);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #eae8df;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+font-family: Century Gothic, sans-serif;
+}
+.hero .main-button {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.hero .main-button {
+    margin-bottom: 0;
+}
+
+
+/* MAIN PICTURE BOX */
+.picture-box {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-width: none;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.picture-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT AND BUTTON OVER THE PICTURE */
+.hero h1,
+.hero p,
+.hero .main-button {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 span {
+    color: #E66A1A;
+}
+
+.hero p {
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.main-button {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: #C15A16;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #91400E;
+}
+        /* SERVICES SECTION */
+        .services {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .section-heading {
+font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+            max-width: 650px;
+            margin: 0 auto 45px;
+
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+.service-card {
+font-family: Century Gothic, sans-serif;
+    position: relative;
+    padding: 30px;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    isolation: isolate;
+}
+
+/* Dark overlay at 80% opacity */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.service-card h3,
+.service-card p {
+    color: #ffffff;
+}
+
+.wiring-card {
+    background-image: url("img/wiring.jpg");
+}
+
+.plumbing-card {
+    background-image: url("img/plumbing.jpg");
+}
+
+.autogate-card {
+    background-image: url("img/autogate.jpg");
+}
+
+.other-card {
+    background-image: url("img/stock.jpg");
+}
+
+        /* CONTACT SECTION */
+        .contact {
+            background-color: #C15A16;
+            color: #f5f0e5;
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .contact .section-description {
+            color: #d1d9d2;
+        }
+
+        .contact-details {
+            margin: 30px auto;
+            line-height: 2.2;
+        }
+
+        .contact-details a {
+font-family: Century Gothic, sans-serif;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0d201b;
+            color: #c6cec8;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* MOBILE RESPONSIVE DESIGN */
+        @media (max-width: 650px) {
+            nav {
+                padding: 20px 5%;
+                text-align: center;
+            }
+
+            .business-name {
+                font-size: 21px;
+            }
+
+            .hero {
+                padding: 45px 5%;
+                min-height: auto;
+            }
+
+            .picture-box {
+                height: 230px;
+            }
+
+            .services,
+            .contact {
+                padding: 60px 5%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                font-size: 29px;
+            }
+        }
+
+/* IMAGE OVERLAY */
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+<nav>
+    <a href="#home" class="business-name">
+        <span class="business-main">RELIABLE WORKS</span>
+        <span class="business-sub">Services</span>
+    </a>
+</nav>
+
+    <!-- FIRST SECTION: HOMEPAGE -->
+    <section class="hero" id="home">
+
+        <h1>Your Home<br>
+            <span>Our Responsibility</span>
+        </h1>
+
+        <p>
+            Wiring, plumbing and auto-gate services delivered with care and reliability.
+        </p>
+
+        <!-- Replace images/hero.jpg with your own image path -->
+        <div class="picture-box">
+            <img src="img/background.png"
+                 alt="Reliable Work Services website banner">
+        </div>
+
+        <a href="#services" class="main-button">
+            Explore Our Services
+        </a>
+
+    </section>
+
+    <!-- SECOND SECTION: SERVICES -->
+    <section class="services" id="services">
+
+        <h2 class="section-heading">
+            What We Can Do For You
+        </h2>
+
+        <p class="section-description">
+            Below is a list of services we offer to meet your expectations
+        </p>
+
+        <div class="service-grid">
+
+            <div class="service-card wiring-card">
+    <h3>Electrical Wiring</h3>
+    <p>Electrical wiring for appliances and related services for your home.</p>
+</div>
+
+<div class="service-card plumbing-card">
+    <h3>Plumbing Services</h3>
+    <p>Practical plumbing solutions for leaks, pipes, blockage and other issues.</p>
+</div>
+
+<div class="service-card autogate-card">
+    <h3>Auto-Gate Repair</h3>
+    <p>Repair and remote services to keep your auto-gate working.</p>
+</div>
+
+<div class="service-card other-card">
+    <h3>Online Hardware Tools (Not Available)</h3>
+    <p>In future we plan to provide you a one-stop shop for all your hardware needs.</p>
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- THIRD SECTION: CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-heading">Get in Touch</h2>
+
+        <p class="section-description">
+            Need something fixed? Contact us directly
+            to discuss your requirements.
+        </p>
+
+        <div class="contact-details">
+
+            <p>
+                Phone:
+                <a href="tel:+601158654410">
+                    +60 11-5865 4410
+                </a>
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:poovenraj07633@gmail.com">
+                    poovenraj07633@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Reliable Work Services.
+        All rights reserved.
+    </footer>
+
+</body>
+</html>
